@@ -18,7 +18,7 @@ function iniciarApp() {
     Moduls.constants.initDate = new Date;
     Moduls.getFooter().load ({ url: 'content/footer.html', script: false});
     Moduls.getHeader().load ({ url: 'content/header.html', script: false});
-    Moduls.getBody().load   ({ url: 'content/blanco.html', script: false});
+    Moduls.getBody().load   ({ url: 'content/compra.html', script: true});
 }
 
 

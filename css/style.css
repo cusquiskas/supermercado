@@ -27,10 +27,5 @@ footer {
 }
 
 body {
-  background-image: url("img/imagen.gif");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 30%;
-  background-color: white;
+
 }
