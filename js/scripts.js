@@ -11,9 +11,7 @@ function iniciarApp() {
             Moduls['get'+Template[i].id.substr(0,1).toUpperCase()+Template[i].id.substr(1).toLowerCase()] = function () { return Moduls[Template[i].id]; };
         }
     }
-    //Template = undefined;
-    //Moduls.Forms = [];
-    //for (let i = 0; i < document.forms.length; i++) Moduls.Forms[document.forms[i].name] = new FormController(document.forms[i], null);
+
     Moduls.constants = {};
     Moduls.constants.initDate = new Date;
     Moduls.getFooter().load ({ url: 'content/footer.html', script: false});
@@ -21,4 +19,6 @@ function iniciarApp() {
     Moduls.getBody().load   ({ url: 'content/compra.html', script: true});
 }
 
+function validaMensajesCBK (s, m) {
 
+}

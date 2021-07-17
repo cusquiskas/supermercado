@@ -1,0 +1,29 @@
+<div class="container">
+    <h2>Tiendas</h2>
+    <p>Nueva tienda:</p>
+    <form name="masterTienda" method="POST" frC-Callback="guardarTienda" class="form-inline" action="/supermercado/service/tienda/guarda.php">
+        <label for="tie_id" class="mr-sm-2">ID:</label>
+        <input type="number" class="form-control mb-2 mr-sm-2" placeholder="" name="tie_id">
+        <label for="tie_name" class="mr-sm-2">Nombre:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="nombre tienda" name="tie_name" required>
+        <button type="submit" class="btn btn-primary mb-2">Guardar</button>
+    </form> 
+    <br>
+    <form name="listaTienda" method="POST" frC-AutoLoad="true" frC-Callback="listarTienda" class="form-inline" action="/supermercado/service/tienda/lista.php">
+        <p>Lista de tiendas:</p>            
+        <table class="table table-hover">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>tienda</th>
+            </tr>
+        </thead>
+        <tbody class="trTiendas">
+            
+        </tbody>
+        </table>
+    </form>
+</div>
+
+
+
