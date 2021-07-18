@@ -3,7 +3,7 @@
     <p>Nueva tienda:</p>
     <form name="masterTienda" method="POST" frC-Callback="guardarTienda" content-Type="application/json" class="form-inline" action="/supermercado/service/tienda/guarda.php">
         <label for="tie_id" class="mr-sm-2">ID:</label>
-        <input type="number" class="form-control mb-2 mr-sm-2" placeholder="" name="tie_id">
+        <input type="number" class="form-control mb-2 mr-sm-2" style="width:50px" placeholder="" name="tie_id" readonly>
         <label for="tie_name" class="mr-sm-2">Nombre:</label>
         <input type="text" class="form-control mb-2 mr-sm-2" placeholder="nombre tienda" name="tie_name" required>
         <button type="submit" class="btn btn-primary mb-2">Guardar</button>

@@ -1,7 +1,14 @@
 var tienda = class {
     constructor (a, b, c) {
         console.log('tienda.js -> constructor');
-        this.tiendaRow = "<tr><td>{{tie_id}}</td><td>{{tie_name}}</td></tr>";
+        this.tiendaRow = "<tr class='trListaTienda'><td>{{tie_id}}</td><td>{{tie_name}}</td></tr>";
+        this.eventos();
+    }
+
+    eventos () {
+        $(".trListaTienda").bind("click", function (evt) {
+            debugger
+        });
     }
 
     guardarTienda (s, d, e) {

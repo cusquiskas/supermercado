@@ -18,6 +18,7 @@
 
     echo json_encode(['success' => true, 'root' => [['tipo' => 'Confirmacion', 'Detalle' => 'Registro guardado correctamente']]]);
 
+    unset($datos);
     unset($manejador);
 ?>
 
