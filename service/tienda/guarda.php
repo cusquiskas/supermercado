@@ -10,12 +10,13 @@
     header('Content-Type: application/json; charset=utf-8');
 
     $manejador = ControladorDinamicoTabla::set('TIENDA');
-    //die(json_encode(['success' => false, 'root' => $_POST]));
-    if ($manejador->save($_POST) != 0) {
+    $datos = json_decode(file_get_contents('php://input'), true);
+
+    if ($manejador->save($datos) != 0) {
         die(json_encode(['success' => false, 'root' => $manejador->getListaErrores()]));
     }
 
-    echo json_encode(['success' => true, 'root' => []]);
+    echo json_encode(['success' => true, 'root' => [['tipo' => 'Confirmacion', 'Detalle' => 'Registro guardado correctamente']]]);
 
     unset($manejador);
 ?>

@@ -5,6 +5,7 @@ var tienda = class {
     }
 
     guardarTienda (s, d, e) {
+        validaErroresCBK(d.root||d);
         if (s) {
             e.form.modul.Forms.listaTienda.executeForm();
         }

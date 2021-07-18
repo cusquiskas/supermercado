@@ -14,16 +14,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="<?php echo Cache::ruta('css/style.css'); ?>">
 </head>
 <body>
-    <div class="">
-        <div role="alert" class="alert alert-success alert-dismissible">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Success!</strong> Indicates a successful or positive action.
-        </div>
-        <div class="alert alert-danger" role="alert">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            This is a danger alert—check it out!
-        </div>
-    </div>
+    <template id="alertBox"></template>
     <template id="header"></template>
     <template id="body"></template>
     <template id="footer"></template>
