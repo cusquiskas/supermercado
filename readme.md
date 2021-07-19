@@ -1,3 +1,9 @@
+CREATE TABLE `ARTICULO` ( 
+  `art_id` INT NOT NULL AUTO_INCREMENT , 
+  `art_name` VARCHAR(200) NOT NULL , 
+  PRIMARY KEY (`art_id`)
+) ENGINE = InnoDB CHARSET=utf8 COLLATE utf8_bin;
+
 CREATE TABLE `TIENDA` (
   `tie_id` int(11) NOT NULL,
   `tie_name` varchar(200) NOT NULL
