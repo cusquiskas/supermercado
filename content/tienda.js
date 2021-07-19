@@ -2,13 +2,6 @@ var tienda = class {
     constructor (a, b, c) {
         console.log('tienda.js -> constructor');
         this.tiendaRow = "<tr class='trListaTienda'><td>{{tie_id}}</td><td>{{tie_name}}</td></tr>";
-        this.eventos();
-    }
-
-    eventos () {
-        $(".trListaTienda").bind("click", function (evt) {
-            debugger
-        });
     }
 
     guardarTienda (s, d, e) {
@@ -21,9 +14,11 @@ var tienda = class {
     listarTienda (s, d, e) {
         if (s) {
             $(".trTiendas").empty();
-            let me = e.form.modul.script;
+            let me = e.form.modul;
             for (let x=0; x<d.root.length; x++) {
-                $(".trTiendas").append($.parseHTML(me.tiendaRow.reemplazaMostachos(d.root[x])));
+                let HTML = $.parseHTML(me.script.tiendaRow.reemplazaMostachos(d.root[x]));
+                HTML[0].addEventListener('click', function () { me.Forms.masterTienda.set(d.root[x]); });
+                $(".trTiendas").append(HTML);
             }
         }
     }

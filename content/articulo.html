@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>Artículos</h2>
+    <p>Nuevo artículo:</p>
+    <form name="masterArticulo" method="POST" frC-Callback="guardarArticulo" content-Type="application/json" class="form-inline" action="/supermercado/service/articulo/guarda.php">
+        <label for="art_id" class="mr-sm-2">ID:</label>
+        <input type="number" class="form-control mb-2 mr-sm-2" style="width:50px" placeholder="" name="art_id" readonly>
+        <label for="art_name" class="mr-sm-2">Nombre:</label>
+        <input type="text" class="form-control mb-2 mr-sm-2" placeholder="nombre artículo" name="art_name" required>
+        <button type="submit" class="btn btn-primary mb-2">Guardar</button>
+        <button type="reset" class="btn btn-primary mb-2">Nueva</button>
+    </form> 
+    <br>
+    <form name="listaArticulo" method="POST" frC-AutoLoad="true" frC-Callback="listarArticulo" class="form-inline" action="/supermercado/service/articulo/lista.php">
+        <p>Lista de tiendas:</p>            
+        <table class="table table-hover" style="cursor: pointer;">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>artículo</th>
+            </tr>
+        </thead>
+        <tbody class="trArticulos">
+            
+        </tbody>
+        </table>
+    </form>
+</div>
