@@ -2,6 +2,9 @@ var tienda = class {
     constructor (a, b, c) {
         console.log('tienda.js -> constructor');
         this.tiendaRow = "<tr class='trListaTienda'><td>{{tie_id}}</td><td>{{tie_name}}</td></tr>";
+        $('.resetFormTienda').click(function () {
+            Moduls.getTienda().Forms['masterTienda'].set({tie_id:'', tie_name:''});
+        });
     }
 
     guardarTienda (s, d, e) {

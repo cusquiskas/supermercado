@@ -2,6 +2,9 @@ var articulo = class {
     constructor (a, b, c) {
         console.log('articulo.js -> constructor');
         this.articuloRow = "<tr class='trListaArticulo'><td>{{art_id}}</td><td>{{art_name}}</td></tr>";
+        $('.resetFormArticulo').click(function () {
+            Moduls.getArticulo().Forms['masterArticulo'].set({art_id:'', art_name:''});
+        });
     }
 
     guardarArticulo (s, d, e) {
