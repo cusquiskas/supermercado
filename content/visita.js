@@ -32,6 +32,7 @@ var visita = class {
     }
 
     abreModal (obj) {
-        debugger
+        Moduls.getModalbody().load({ url: 'content/detalle.html', script: true, parametros:obj });
+        construirModal({ title: 'Título', w: 900, h:500 });
     }
 }

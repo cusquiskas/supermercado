@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Detalle Compra</h2>
+    <p>Nuevo artículo:</p>
+    <form name="masterDetalle" method="POST" frC-Callback="guardarDetalle" content-Type="application/json" class="form-inline" action="/supermercado/service/detalle/guarda.php">
+        <label for="det_id" class="mr-sm-2">ID:</label>
+        <input type="number" class="form-control mb-2 mr-sm-2" style="width:50px" placeholder="" name="com_id" readonly>
+        <label for="com_date" class="mr-sm-2">Fecha:</label>
+        <input type="date" class="form-control mb-2 mr-sm-2" placeholder="dd/mm/yyyy" name="com_date" required>
+        <label for="com_tie" class="mr-sm-2">Tienda:</label>
+        <select class="form-control mb-2 mr-sm-2" name="com_tie" required
+        frC-indexResponse="root:tie_name,tie_id"
+        frC-Store="/supermercado/service/tienda/lista.php"></select>
+        <button type="submit" class="btn btn-primary mb-2">Guardar</button>
+        <button type="button" class="resetFormCompra btn btn-primary mb-2">Nueva</button>
+    </form> 
+    <br>
+    <form name="listaCompra" method="POST" frC-AutoLoad="true" frC-Callback="listarCompra" class="form-inline" action="/supermercado/service/compra/lista.php">
+        <p>Lista de compras:</p>            
+        <table class="table table-hover">
+        <thead>
+            <tr>
+            <th>id</th>
+            <th>tienda</th>
+            <th>Fecha</th>
+            <th>&nbsp;</th>
+            </tr>
+        </thead>
+        <tbody class="trCompras">
+            
+        </tbody>
+        </table>
+    </form>
+</div>
