@@ -2,30 +2,32 @@
     <h2>Detalle Compra</h2>
     <p>Nuevo artículo:</p>
     <form name="masterDetalle" method="POST" frC-Callback="guardarDetalle" content-Type="application/json" class="form-inline" action="/supermercado/service/detalle/guarda.php">
-        <label for="det_id" class="mr-sm-2">ID:</label>
-        <input type="number" class="form-control mb-2 mr-sm-2" style="width:50px" placeholder="" name="com_id" readonly>
+        <label for="det_com" class="mr-sm-2">Tienda:</label>
+        <input type="number" style="display: none;" name="det_com" required>
+        <input type="text" class="form-control mb-2 mr-sm-2" name="tie_name" frC_submit="false" readonly>
         <label for="com_date" class="mr-sm-2">Fecha:</label>
-        <input type="date" class="form-control mb-2 mr-sm-2" placeholder="dd/mm/yyyy" name="com_date" required>
-        <label for="com_tie" class="mr-sm-2">Tienda:</label>
-        <select class="form-control mb-2 mr-sm-2" name="com_tie" required
-        frC-indexResponse="root:tie_name,tie_id"
-        frC-Store="/supermercado/service/tienda/lista.php"></select>
+        <input type="date" class="form-control mb-2 mr-sm-2" name="com_date" frC_submit="false" readonly>
+        <label for="det_art" class="mr-sm-2">Artículo:</label>
+        <select class="form-control mb-2 mr-sm-2" name="det_art" required
+        frC-indexResponse="root:art_name,art_id"
+        frC-Store="/supermercado/service/articulo/lista.php"></select>
+        <label for="det_precio" class="mr-sm-2">Precio:</label>
+        <input type="number" step='0.01' class="form-control mb-2 mr-sm-2" name="det_precio" required>
+        
         <button type="submit" class="btn btn-primary mb-2">Guardar</button>
-        <button type="button" class="resetFormCompra btn btn-primary mb-2">Nueva</button>
+        <button type="button" class="resetFormDetalle btn btn-primary mb-2">Nuevo</button>
     </form> 
     <br>
-    <form name="listaCompra" method="POST" frC-AutoLoad="true" frC-Callback="listarCompra" class="form-inline" action="/supermercado/service/compra/lista.php">
-        <p>Lista de compras:</p>            
+    <form name="listaDetalle" method="POST" frC-AutoLoad="true" frC-Callback="listarDetalle" class="form-inline" action="/supermercado/service/detalle/lista.php">
+        <p>Lista de Artículos:</p>            
         <table class="table table-hover">
         <thead>
             <tr>
-            <th>id</th>
-            <th>tienda</th>
-            <th>Fecha</th>
-            <th>&nbsp;</th>
+            <th>Artículo</th>
+            <th>Importe</th>
             </tr>
         </thead>
-        <tbody class="trCompras">
+        <tbody class="trDetalle">
             
         </tbody>
         </table>
