@@ -34,6 +34,6 @@ var visita = class {
     abreModal (obj) {
         obj.det_com = obj.com_id;
         Moduls.getModalbody().load({ url: 'content/detalle.html', script: true, parametros:obj });
-        construirModal({ title: 'Título', w: 900, h:500 });
+        construirModal({ title: 'Título', w: 2000, h:500 });
     }
 }
